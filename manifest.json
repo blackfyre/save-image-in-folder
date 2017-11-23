@@ -1,0 +1,16 @@
+{
+
+    "manifest_version": 2,
+    "name": "Save Image in Folder",
+    "version": "1.0",
+    "description": "If you like to download images in a categorized fashion, this is the extension for you!",
+    "permissions": ["contextMenus","activeTab"],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*"],
+          "js": ["main.js"]
+        }
+      ]
+
+}
