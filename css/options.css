@@ -6,6 +6,10 @@ table {
     width: 100%;
 }
 
+button.block-width {
+    text-align: center;
+}
+
 .browser-style.default {
     margin-bottom: 0;
 }

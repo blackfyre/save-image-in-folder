@@ -1,21 +1,29 @@
 browser.contextMenus.create({
   id: 'siif-folder-selection',
   title: browser.i18n.getMessage('contextMenuTopEntry'),
-  contexts: ['image']
+  contexts: ['image'],
+  icons: {
+    '16': 'icons/16/003-folder.png',
+    '32': 'icons/32/003-folder.png'
+  }
 },onCreated);
 
 browser.contextMenus.create({
   id: 'siif-open-options',
   title: browser.i18n.getMessage('contextMenuOptions'),
   contexts: ['image'],
-  parentId: 'siif-folder-selection'
+  parentId: 'siif-folder-selection',
+  icons: {
+    '16': 'icons/16/002-multimedia.png',
+    '32': 'icons/32/002-multimedia.png'
+  }
 },onCreated);
 
 browser.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId === 'siif-folder-selection') {
     console.log('happy stuff');
   } else if (info.menuItemId === 'siif-open-options') {
-    browser.runtime.openOptionsPage()
+    browser.runtime.openOptionsPage();
   }
 });
 

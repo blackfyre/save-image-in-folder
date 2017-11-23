@@ -10,12 +10,12 @@
 
   "background": {
     "scripts": [
-      "main.js"
+      "js/main.js"
     ]
   },
   "options_ui": {
     "browser_style": true,
-    "page": "options.html"
+    "page": "html/options.html"
   }
 
 }
