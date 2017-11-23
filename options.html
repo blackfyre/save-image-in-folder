@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/options.css">
+
+
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Folders</legend>
+
+        <table class="block-width">
+            <thead>
+                <tr>
+                    <th style="width:45%">Alias</th>
+                    <th style="width:45%">Folder</th>
+                    <th style="width:10%">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/e</td>
+                    <td>C:/something/somewhere</td>
+                    <td>
+                        <button class="block-width">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <form>
+            <table  class="block-width">
+                <tr>
+                    <td style="width:45%" class="browser-style">
+                        <input class="block-width" type="text" name="alias" placeholder="Alias">
+                    </td>
+
+                    <td style="width:45%" class="browser-style">
+                        <input class="block-width" type="text" name="path" placeholder="Path">
+                    </td>
+                    <td style="width:10%">
+                        <button class="browser-style default" type="submit">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </fieldset>
+
+    <form>
+        <fieldset clas="browser-style">
+            <legend>Default action on duplicate</legend>
+
+            <label for="ask" clas="browser-style">
+                <input  type="radio" name="action" value="ask"> Ask
+            </label>
+            <label for="overwrite">
+                <input type="radio" name="action" value="overwrite"> Overwrite
+            </label>
+            <label for="increment">
+                <input type="radio" name="action" value="increment"> Increment
+            </label>
+        </fieldset>
+
+        <button type="submit" class="default">Update</button>
+    </form>
+
+</body>
+
+</html>

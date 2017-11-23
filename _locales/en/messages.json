@@ -1,1 +1,10 @@
-{}
+{
+    "contextMenuTopEntry": {
+        "message": "Save image in folder",
+        "description": ""
+    },
+    "contextMenuOptions": {
+        "message": "Options",
+        "description": ""
+    }
+}
