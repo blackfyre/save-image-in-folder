@@ -1,16 +1,16 @@
 {
 
-    "manifest_version": 2,
-    "name": "Save Image in Folder",
-    "version": "1.0",
-    "description": "If you like to download images in a categorized fashion, this is the extension for you!",
-    "permissions": ["contextMenus","activeTab"],
+  "manifest_version": 2,
+  "name": "Save Image in Folder",
+  "version": "1.0",
+  "description": "If you like to download images in a categorized fashion, this is the extension for you!",
+  "permissions": ["contextMenus", "activeTab"],
+  "homepage_url": "https://github.com/blackfyre/save-image-in-folder",
 
-    "content_scripts": [
-        {
-            "matches": ["*://*"],
-          "js": ["main.js"]
-        }
-      ]
+  "background": {
+    "scripts": [
+      "main.js"
+    ]
+  }
 
 }
