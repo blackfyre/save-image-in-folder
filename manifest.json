@@ -1,11 +1,14 @@
 {
-
   "manifest_version": 2,
   "name": "Save Image in Folder",
   "version": "1.0",
   "description": "If you like to download images in a categorized fashion, this is the extension for you!",
-  "permissions": ["contextMenus", "activeTab", "storage"],
+  "permissions": ["contextMenus", "activeTab", "storage", "downloads"],
   "homepage_url": "https://github.com/blackfyre/save-image-in-folder",
+  "developer": {
+    "name": "Galicz Miklós",
+    "url": "https://blackfyre.ninja"
+  },
   "default_locale": "en",
 
   "background": {
@@ -16,6 +19,11 @@
   "options_ui": {
     "browser_style": true,
     "page": "html/options.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "save-image-in-folder@blackfyre.ninja",
+      "strict_min_version": "48.0"
+    }
   }
-
 }
