@@ -6,5 +6,9 @@
     "contextMenuOptions": {
         "message": "Options",
         "description": ""
+    },
+    "Folders": {
+        "message": "Folders",
+        "description": ""
     }
 }

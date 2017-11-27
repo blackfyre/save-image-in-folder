@@ -1,0 +1,1 @@
+The project has been halted until a solution is found to save files on an absolute path from a web extension / chrome extension
