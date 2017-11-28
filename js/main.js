@@ -19,7 +19,8 @@ function initScript() {
   var getStoredFolders = browser.storage.local.get('folders');
   
   getStoredFolders.then((result) => {
-    var folders = result.folders;
+    console.log(result);
+    var folders = result.folders || {};
     
     var i = 0;
     for (let key in folders) {
@@ -35,10 +36,24 @@ function initScript() {
           },
           onclick: (info) => {
             console.log(info);
-            
+
+            if (validateURL(info.srcUrl)) {
+              /*
             browser.downloads.download({
               url: info.srcUrl
             });
+            */
+            } else {
+              browser.notifications.create({
+                'type': 'basic',
+                'title': 'Format not supported!',
+                'message': 'Images stored in a Base64 format are not currently supported!',
+                'contextMessage': 'error',
+                'iconUrl': 'icons/16/001-error.png'
+              });
+            }
+            
+            
             
           }
         });
@@ -101,7 +116,17 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-(() => { 
+function validateURL(url) {
+
+  var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+  if(!regex.test(url)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+(function() { 
   var getDefaultAction = browser.storage.local.get('action');
 
   getDefaultAction.then((result) => {

@@ -76,7 +76,7 @@ function restoreOptions() {
   });
 
   getStoredFolders.then((result) => {
-    folders = result.folders;
+    folders = result.folders || {};
 
     displayFolders();
   });

@@ -3,7 +3,7 @@
   "name": "Save Image in Folder",
   "version": "1.0",
   "description": "If you like to download images in a categorized fashion, this is the extension for you!",
-  "permissions": ["contextMenus", "activeTab", "storage", "downloads"],
+  "permissions": ["contextMenus", "activeTab", "storage", "downloads", "notifications"],
   "homepage_url": "https://github.com/blackfyre/save-image-in-folder",
   "developer": {
     "name": "Galicz Miklós",
